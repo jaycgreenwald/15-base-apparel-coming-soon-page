@@ -1,0 +1,138 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main {
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+  display: grid;
+  grid-template-rows: 0.315fr 0.9375fr 1.7475fr;
+  width: 375px;
+  height: 800px;
+}
+
+.main__logo {
+  padding-top: 31px;
+  padding-left: 31px;
+}
+
+.main__logo-img {
+  background-image: url(../images/logo.svg);
+  padding: 10px 51px 10px 51px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main__hero {
+  background-image: url(../images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+}
+
+.main__content {
+  text-align: center;
+}
+
+.main__title {
+  font-size: 40px;
+  color: hsl(0deg, 6%, 24%);
+  text-transform: uppercase;
+  letter-spacing: 11px;
+  line-height: 1.05;
+  padding: 65px 0 0 0;
+}
+
+.main__title--rose {
+  font-weight: 300;
+  color: hsl(0deg, 36%, 70%);
+}
+
+.main__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(0deg, 36%, 70%);
+  letter-spacing: 0.05px;
+  line-height: 1.6;
+  padding: 13px 32px 0 32px;
+}
+
+.email {
+  position: relative;
+  padding: 31px 0 0 0;
+}
+
+.email__input {
+  border: 1px solid hsl(0deg, 36%, 70%);
+  outline-style: none;
+  border-radius: 28px;
+  padding: 17px 146px 13px 22px;
+  background: hsla(0deg, 0%, 0%, 0);
+}
+
+.email__input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(0deg, 36%, 70%);
+}
+
+.email__input:-ms-input-placeholder {
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(0deg, 36%, 70%);
+}
+
+.email__input::placeholder {
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(0deg, 36%, 70%);
+}
+
+.email__button {
+  position: absolute;
+  top: 32px;
+  right: 97px;
+  cursor: pointer;
+}
+
+.email__submit {
+  padding: 15px 32px 15px 32px;
+  border-radius: 22px;
+  border-style: none;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  position: absolute;
+  box-shadow: 0px 8px 15px 0px #F2D2D2;
+}
+
+.email__arrow {
+  background-image: url(../images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  padding: 23px 32px 23px 32px;
+  display: inline;
+  position: absolute;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.attribution {
+  font-size: 11px;
+}/*# sourceMappingURL=main.css.map */
