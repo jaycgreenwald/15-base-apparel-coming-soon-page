@@ -3,136 +3,139 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
 }
 
-.main {
-  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+.page {
   display: grid;
-  grid-template-rows: 0.315fr 0.9375fr 1.7475fr;
-  width: 375px;
-  height: 800px;
+  grid-template-columns: 1fr 23.4375rem 1fr;
 }
 
-.main__logo {
-  padding-top: 31px;
-  padding-left: 31px;
+.logo {
+  grid-column: 2/2;
+  padding-left: 0.1875rem;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.3125rem;
 }
 
-.main__logo-img {
-  background-image: url(../images/logo.svg);
-  padding: 10px 51px 10px 51px;
+.logo__img {
+  transform: scale(0.65);
+}
+
+.hero {
+  background-image: url(/images/hero-mobile.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.main__hero {
-  background-image: url(../images/hero-mobile.jpg);
-  background-repeat: no-repeat;
-}
-
-.main__content {
+  grid-column: 2/2;
+  padding: 33.25%;
   text-align: center;
 }
 
-.main__title {
-  font-size: 40px;
-  color: hsl(0deg, 6%, 24%);
-  text-transform: uppercase;
-  letter-spacing: 11px;
-  line-height: 1.05;
-  padding: 65px 0 0 0;
+.content {
+  grid-column: 2/2;
+  padding: 31px 33px 0 33px;
 }
 
-.main__title--rose {
+.content__title {
+  color: hsl(0deg, 36%, 70%);
+  font-size: 2.5rem;
   font-weight: 300;
-  color: hsl(0deg, 36%, 70%);
+  letter-spacing: 0.6875rem;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.main__text {
-  font-size: 14px;
+.content__title--bold {
+  color: hsl(0deg, 6%, 24%);
   font-weight: 400;
+}
+
+.content__text {
   color: hsl(0deg, 36%, 70%);
-  letter-spacing: 0.05px;
+  font-size: 0.875rem;
+  font-weight: 400;
   line-height: 1.6;
-  padding: 13px 32px 0 32px;
+  margin-top: 0.75rem;
+  text-align: center;
 }
 
-.email {
+.content__input {
+  margin-top: 1.8125rem;
   position: relative;
-  padding: 31px 0 0 0;
 }
 
-.email__input {
-  border: 1px solid hsl(0deg, 36%, 70%);
-  outline-style: none;
-  border-radius: 28px;
-  padding: 17px 146px 13px 22px;
-  background: hsla(0deg, 0%, 0%, 0);
+.input-email-rounded {
+  background: none;
+  border: 0.0625rem solid hsl(0deg, 36%, 70%);
+  border-radius: 100vmax;
+  padding: 1.0625rem 0.625rem 0.8125rem 1.25rem;
+  width: 100%;
 }
 
-.email__input::-moz-placeholder {
-  font-size: 14px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+.input-email-rounded::-moz-placeholder {
   color: hsl(0deg, 36%, 70%);
-}
-
-.email__input:-ms-input-placeholder {
-  font-size: 14px;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  color: hsl(0deg, 36%, 70%);
+  font-size: 0.9rem;
 }
 
-.email__input::placeholder {
-  font-size: 14px;
+.input-email-rounded:-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.input-email-rounded::placeholder {
   color: hsl(0deg, 36%, 70%);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9rem;
 }
 
-.email__button {
-  position: absolute;
-  top: 32px;
-  right: 97px;
-  cursor: pointer;
-}
-
-.email__submit {
-  padding: 15px 32px 15px 32px;
-  border-radius: 22px;
-  border-style: none;
+.btn-rounded {
   background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  border: none;
+  border-radius: 100vmax;
+  box-shadow: 0px 10px 20px -10px rgba(142, 140, 137, 0.9);
+  cursor: pointer;
+  display: block;
+  padding: 0.875rem 1.625rem 0.6875rem 1.625rem;
   position: absolute;
-  box-shadow: 0px 8px 15px 0px #F2D2D2;
+  right: 0;
+  top: 0;
 }
 
-.email__arrow {
-  background-image: url(../images/icon-arrow.svg);
-  background-repeat: no-repeat;
-  padding: 23px 32px 23px 32px;
-  display: inline;
-  position: absolute;
-  background-position-x: center;
-  background-position-y: center;
+.btn-rounded:hover {
+  background: hsl(0deg, 75%, 91%);
 }
 
-.attribution {
-  font-size: 11px;
+.btn-rounded::before {
+  content: url(/images/icon-error.svg);
+  display: none;
+  position: absolute;
+  right: 4.75rem;
+  top: 25%;
+}
+
+.btn-rounded::after {
+  content: url(/images/icon-arrow.svg);
+}
+
+.error-email {
+  color: hsl(0deg, 93%, 68%);
+  display: none;
+  font-size: 0.875rem;
+  margin: 0.625rem 0 0 1.25rem;
 }/*# sourceMappingURL=main.css.map */

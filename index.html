@@ -3,39 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/main.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 </head>
+
 <body>
-  <main class="main">
-    <div class="main__logo">
-      <div class="main__logo-img"></div>
+  <main class="page">
+    <div class="logo">
+      <img src="images/logo.svg" alt="" class="logo__img">
     </div>
-    <div class="main__hero"></div>
-    <div class="main__content">
-      <h1 class="main__title"><span class="main__title--rose">We're </span>coming soon</h1>
-      <p class="main__text">Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <div class="email">
-        <label for="email" class=""></label>
-        <input type="email" id="email" class="email__input" placeholder="Email Address">
-        <div class="email__button">
-          <label for="submit"></label>
-          <input type="button" id="submit" value="" class="email__submit">
-          <div class="email__arrow"></div>
-        </div>
-      </div>
+    <div class="hero">
+      <!-- <img src="images/hero-mobile.jpg" alt="" class="hero__img"> -->
     </div>
+    <div class="content">
+      <h1 class="content content__title">
+        We're <span class="content__title--bold">coming soon</span>
+      </h1>
+      <p class="content__text">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form action="" class="content__input">
+        <label for="">
+        </label>
+        <input class="input-email-rounded" type="email" name="" id=""           placeholder="Email Address">
+        <p class="error-email">Please provide a valid email</p>
+        <button class="btn-rounded">
+          <!-- <img src="images/icon-arrow.svg" alt="" class="btn-rnd__arrow"> -->
+        </button>
+      </form>
+    </div> <!-- content end -->
   </main>
-  <footer class="attribution">
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Jason Greenwald</a>.
-    </p>
-  </footer>
 </body>
 </html>

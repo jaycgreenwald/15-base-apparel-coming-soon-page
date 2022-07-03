@@ -1,0 +1,156 @@
+// colors
+$clr-red-200: hsl(0, 75%, 91%);
+$clr-red-300: hsl(0, 36%, 70%);
+$clr-red-400: hsl(0, 93%, 68%);
+$clr-red-800: hsl(0, 6%, 24%);
+
+// gradient colors
+$btn-clr-start: hsl(0, 80%, 86%);
+$btn-clr-stop: hsl(0, 74%, 74%);
+$bg-clr-start: hsl(0, 0%, 100%);
+$bg-clr-stop: hsl(0, 100%, 98%);
+
+// font weights
+$fw-300: 300;
+$fw-400: 400;
+$fw-600: 600;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	// background-color: fallback color
+	display: flex;
+	flex-direction: column;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: $fw-400;
+	min-height: 100vh;
+}
+
+// || MOBILE LAYOUT
+
+.page {
+	display: grid;
+	grid-template-columns: 1fr 23.4375rem 1fr;
+}
+
+.logo {
+	grid-column: 2 / 2;
+	padding-left: 0.1875rem;
+	padding-top: 1.5625rem;
+	padding-bottom: 1.3125rem;
+}
+
+.logo__img {
+	transform: scale(.65);
+}
+
+.hero {
+	background-image: url(/images/hero-mobile.jpg);
+	background-repeat: no-repeat;
+	grid-column: 2 / 2;
+	padding: 33.25%;
+	text-align: center;
+}
+
+.hero__img {
+	
+}
+
+.content {
+	grid-column: 2 / 2;
+	padding: 31px 33px 0 33px;
+}
+
+.content__title {
+	color: $clr-red-300;
+	font-size: 2.5rem;
+	font-weight: $fw-300;
+	letter-spacing: 0.6875rem;
+	line-height: 1.1;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.content__title--bold {
+	color: $clr-red-800;
+	font-weight: 400;
+}
+
+.content__text {
+	color: $clr-red-300;
+	font-size: 0.875rem;
+	font-weight: $fw-400;
+	line-height: 1.6;
+	margin-top: 0.75rem;
+	text-align: center;
+}
+
+.content__input {
+	margin-top: 1.8125rem;
+	position: relative;
+}
+
+.input-email-rounded {
+	background: none;
+	border: 0.0625rem solid $clr-red-300;
+	border-radius: 100vmax; // learned hack from KP video 7/2/2022
+	padding: 1.0625rem 0.625rem 0.8125rem 1.25rem;
+	width: 100%;
+}
+
+.input-email-rounded::placeholder {
+	color: $clr-red-300;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: .9rem;
+}
+
+.btn-rounded {
+	background: linear-gradient(135deg, $btn-clr-start, $btn-clr-stop);
+	border: none;
+	border-radius: 100vmax;
+	box-shadow: 0px 10px 20px -10px rgba(142, 140, 137, 0.90);
+	cursor: pointer;
+	display: block;
+	padding: 0.875rem 1.625rem 0.6875rem 1.625rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.btn-rounded:hover {
+	background: $clr-red-200;
+}
+
+.btn-rounded::before {
+	content: url(/images/icon-error.svg);
+	display: none;
+	position: absolute;
+	right: 4.75rem;
+	top: 25%;
+}
+
+.btn-rounded::after {
+	content: url(/images/icon-arrow.svg);
+}
+
+.error-email {
+	color: $clr-red-400;
+	display: none;
+	font-size: 0.875rem;
+	margin: 0.625rem 0 0 1.25rem;
+}
+
+// CHANGE LOG
+// 7/3/2022 Build mobile layout including overlays and errors
