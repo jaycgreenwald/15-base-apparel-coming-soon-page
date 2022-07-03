@@ -57,7 +57,7 @@ body {
 }
 
 .hero {
-	background-image: url(/images/hero-mobile.jpg);
+	background-image: url(../images/hero-mobile.jpg);
 	background-repeat: no-repeat;
 	grid-column: 2 / 2;
 	padding: 33.25%;
@@ -134,7 +134,7 @@ body {
 }
 
 .btn-rounded::before {
-	content: url(/images/icon-error.svg);
+	content: url(../images/icon-error.svg);
 	display: none;
 	position: absolute;
 	right: 4.75rem;
@@ -142,7 +142,7 @@ body {
 }
 
 .btn-rounded::after {
-	content: url(/images/icon-arrow.svg);
+	content: url(../images/icon-arrow.svg);
 }
 
 .error-email {
@@ -153,4 +153,5 @@ body {
 }
 
 // CHANGE LOG
+// 7/3/2022 Fix image paths that were incorrect
 // 7/3/2022 Build mobile layout including overlays and errors
