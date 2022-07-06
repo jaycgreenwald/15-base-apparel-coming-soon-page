@@ -14,13 +14,12 @@
 <body>
   <main class="page">
     <div class="logo">
-      <img src="images/logo.svg" alt="" class="logo__img">
+      <img src="images/logo.svg" alt="Base Apparel" class="logo__img">
     </div>
     <div class="hero">
-      <!-- <img src="images/hero-mobile.jpg" alt="" class="hero__img"> -->
     </div>
     <div class="content">
-      <h1 class="content content__title">
+      <h1 class="content__title">
         We're <span class="content__title--bold">coming soon</span>
       </h1>
       <p class="content__text">
@@ -28,15 +27,15 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
       <form action="" class="content__input">
-        <label for="">
+        <label for="email-input">
         </label>
-        <input class="input-email-rounded" type="email" name="" id=""           placeholder="Email Address">
-        <p class="error-email">Please provide a valid email</p>
-        <button class="btn-rounded">
-          <!-- <img src="images/icon-arrow.svg" alt="" class="btn-rnd__arrow"> -->
+        <input class="input-email-rounded js-input-email-rounded" type="email" aria-label="Your email address..." name="" id="email-input" placeholder="Email Address">
+        <p class="error-email js-error-email">Please provide a valid email</p>
+        <button type="submit" class="btn-rounded js-btn-rounded">
         </button>
       </form>
     </div> <!-- content end -->
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

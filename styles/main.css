@@ -1,6 +1,6 @@
 html {
-  font-size: 100%;
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 *,
@@ -13,6 +13,8 @@ html {
 
 body {
   align-items: center;
+  background-color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
   display: flex;
   flex-direction: column;
   font-family: "Josefin Sans", sans-serif;
@@ -27,9 +29,7 @@ body {
 
 .logo {
   grid-column: 2/2;
-  padding-left: 0.1875rem;
-  padding-top: 1.5625rem;
-  padding-bottom: 1.3125rem;
+  padding: 1.5625rem 0 1.3125rem 0.1875rem;
 }
 
 .logo__img {
@@ -46,7 +46,7 @@ body {
 
 .content {
   grid-column: 2/2;
-  padding: 31px 33px 0 33px;
+  padding: 62px 33px 0 33px;
 }
 
 .content__title {
@@ -69,12 +69,12 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.6;
-  margin-top: 0.75rem;
+  padding: 0.75rem 0 0 0;
   text-align: center;
 }
 
 .content__input {
-  margin-top: 1.8125rem;
+  margin: 1.8125rem 0 0 0;
   position: relative;
 }
 
@@ -111,14 +111,16 @@ body {
   box-shadow: 0px 10px 20px -10px rgba(142, 140, 137, 0.9);
   cursor: pointer;
   display: block;
+  opacity: 1;
   padding: 0.875rem 1.625rem 0.6875rem 1.625rem;
   position: absolute;
   right: 0;
+  transition: opacity 200ms;
   top: 0;
 }
 
 .btn-rounded:hover {
-  background: hsl(0deg, 75%, 91%);
+  opacity: 0.5;
 }
 
 .btn-rounded::before {
@@ -138,4 +140,83 @@ body {
   display: none;
   font-size: 0.875rem;
   margin: 0.625rem 0 0 1.25rem;
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    align-items: flex-end;
+    background: url(../images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+    background-repeat: repeat no-repeat;
+    background-size: cover cover;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 507px minmax(0rem, 12rem) 610px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: ". logo    . hero" ". content . hero";
+    height: 100vh;
+  }
+
+  .logo {
+    grid-area: logo;
+    padding: 4rem 0 0 2.0625rem;
+  }
+
+  .logo__img {
+    transform: none;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .hero {
+    grid-area: hero;
+    background-image: url(../images/hero-desktop.jpg);
+    background-size: cover;
+  }
+
+  .content {
+    padding: 3.1875rem 1.5rem 0 2.0625rem;
+  }
+
+  .content__title {
+    font-size: 4.0625rem;
+    letter-spacing: 1.0625rem;
+    line-height: 1.05;
+    padding: 4.875rem 0 0 0;
+    text-align: left;
+  }
+
+  .content__text {
+    font-size: 1.0625rem;
+    letter-spacing: -0.45px;
+    padding: 22px 0 0 0;
+    text-align: left;
+  }
+
+  .content__input {
+    margin: 2.5rem 0 0 0;
+  }
+
+  .input-email-rounded {
+    padding: 1.3125rem 0.625rem 1.0625rem 1.875rem;
+  }
+
+  .input-email-rounded::-moz-placeholder {
+    font-size: 1rem;
+  }
+
+  .input-email-rounded:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+
+  .input-email-rounded::placeholder {
+    font-size: 1rem;
+  }
+
+  .btn-rounded {
+    padding: 1.125rem 2.6875rem 0.9375rem 2.6875rem;
+  }
 }/*# sourceMappingURL=main.css.map */
