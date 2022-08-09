@@ -1,0 +1,112 @@
+// || MOBILE LAYOUT
+
+.page {
+	display: grid;
+	grid-template-columns: 1fr 23.4375rem 1fr;
+}
+
+.logo {
+	grid-column: 2 / 2;
+	padding: 1.5625rem 0 1.625rem 0.1875rem;
+}
+
+.logo__img {
+	transform: scale(.65);
+}
+
+.hero {
+	background-image: url(../images/hero-mobile.jpg);
+	background-repeat: no-repeat;
+	grid-column: 2 / 2;
+	padding: 33.25%;
+	text-align: center;
+}
+
+.content {
+	grid-column: 2 / 2;
+	padding: 3.875rem 2rem 0 2.0625rem;
+}
+
+.content__title {
+	color: $clr-red-300;
+	font-size: 2.5rem;
+	font-weight: $fw-300;
+	letter-spacing: 0.6875rem;
+	line-height: 1.1;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.content__title--bold {
+	color: $clr-red-800;
+	font-weight: 600;
+}
+
+.content__text {
+	color: $clr-red-300;
+	font-size: 0.875rem;
+	font-weight: $fw-400;
+	line-height: 1.6;
+	padding: 0.75rem 0 0 0;
+	text-align: center;
+}
+
+.content__input {
+	margin: 31px 0 0 0;
+	position: relative;
+}
+
+.input-email-rounded {
+	background: none;
+	border: 0.0625rem solid $clr-red-300;
+	border-radius: 100vmax;
+	padding: 0.8125rem 0.625rem 0.875rem 1.375rem;
+	width: 100%;
+}
+
+.input-email-rounded::placeholder {
+	color: $clr-red-300;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 0.875rem;
+}
+
+.btn-rounded {
+	background: linear-gradient(135deg, $btn-clr-start, $btn-clr-stop);
+	border: none;
+	border-radius: 100vmax;  // ensures pill shape
+	box-shadow: 0px 10px 20px -10px rgba(142, 140, 137, 0.90);
+	cursor: pointer;
+	display: block;
+	opacity: 1;
+	padding: 10px 26px 10px 26px;
+	position: absolute;
+	right: 0;
+	transition: opacity 200ms;
+	top: 1px;
+}
+
+.btn-rounded:hover {
+	opacity: .5;
+}
+
+.btn-rounded::before {
+	content: url(../images/icon-error.svg);
+	display: none;
+	position: absolute;
+	right: 4.75rem;
+	top: 25%;
+}
+
+.btn-rounded::after {
+	content: url(../images/icon-arrow.svg);
+	position: relative;
+	top: 2px;
+	left: 1px;
+}
+
+.error-email {
+	color: $clr-red-400;
+	display: none;
+	font-size: 0.875rem;
+	margin: 0.625rem 0 0 1.25rem;
+}

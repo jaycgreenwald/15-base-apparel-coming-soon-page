@@ -1,0 +1,88 @@
+
+@media screen and (min-width: 1100px) {
+	
+	body {
+		align-items: flex-end;
+		background: url(../images/bg-pattern-desktop.svg), 
+		linear-gradient(135deg, $bg-clr-start, $bg-clr-stop);
+		background-repeat: repeat no-repeat;
+		background-size: cover cover;
+	}
+
+	.page {
+		display: grid;
+		grid-template-columns: 1fr 31.6875rem minmax(0px, 190px) 38.125rem; 
+		grid-template-rows: auto 1fr;
+		grid-template-areas: 
+		". logo    . hero"
+		". content . hero";
+		height: 100vh;
+	}
+
+	.logo {
+		grid-area: logo;
+		padding: 4rem 0 0 2.0625rem;
+	}
+	
+	.logo__img {
+		transform: none;
+	}
+
+	.content {
+		grid-area: content;
+	}
+	
+	.hero {
+		grid-area: hero;
+		background-image: url(../images/hero-desktop.jpg);
+		background-size: cover;
+	}
+
+	.content {
+		padding: 3.1875rem 1.5rem 0 2.0625rem;
+	}
+	
+	.content__title {
+		font-size: 64px;
+		letter-spacing: 1.0625rem;
+		line-height: 1.05;
+		padding: 84px 0 0 1px;
+		text-align: left;
+	}
+	
+	.content__text {
+		font-size: 1.0625rem;
+		letter-spacing: -.45px;
+		padding: 24px 0 0 0;
+		text-align: left;
+	}
+
+	.content__input {
+		margin: 2.5rem 0 0 0;
+	}
+	
+	.input-email-rounded {
+		padding: 18px 10px 17px 30px;
+	}
+	
+	.input-email-rounded::placeholder {
+		font-size: 1rem;
+	}
+
+	.btn-rounded {
+		padding: 14px 43px 15px 43px;
+	}
+	
+	.btn-rounded::after {
+		position: relative;
+	}
+	
+}
+
+@media screen and (min-width: 1441px) {
+
+	body {
+		align-items: center;
+	}
+
+}
